@@ -1,0 +1,225 @@
+html,body,p,h1,h2,h3,h4,h5,h6,ul,ol,input{
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 16px;
+}
+// 网页字体引入
+@font-face{
+    font-family: shanghei;
+    src: url('../font/造字工房尚黑G0v1常规体.otf');
+}
+
+ul,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+body{
+    font-family:shanghei;
+}
+
+.header{
+    height: 350px;
+    background: url(http://ovufm1chl.bkt.clouddn.com/weibo-banner-02.jpg) no-repeat center;
+    background-size:cover;
+    position: relative;
+}
+
+.nav{
+    height: 60px;
+    background: rgba(129,199,132,.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    .navbar{
+        margin: 0 15px;
+        position: relative;
+        .title{
+            left: 0;
+            top: 0;
+            color: #FFFFFF;
+            line-height: 60px;
+            position: absolute;
+            h1{
+                font-family: '-apple-system,BlinkMacSystemFont,"Lucida Grande","Helvetica Neue",Helvetica,Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Zen Hei","WenQuanYi Micro Hei","Noto Sans CJK SC","Source Han Sans CN",SimSun,sans-serif';
+                i{
+                    font-size: 40px;
+                }
+            }
+        }
+        .menue{
+            text-align: right;
+            line-height: 60px;
+            display: none;
+            a{  
+               margin-right: 50px;
+               i{
+                 font-size: 22px;
+                 color: #FFFFFF;
+               }
+            }
+        }
+        .navlist{
+            position: relative;
+            left: 0;
+            top: 0;
+            text-align: center;
+            ul{
+                display: inline-block;
+                clear: both;
+                overflow: hidden;
+                line-height: 60px;
+                margin: 0 auto;
+                font-size: 20px;
+                height: 60px;
+                    li{
+                        float: left;
+                        a{
+                            padding: 0 16px;
+                            display: block;
+                            color: #FFFFFF;
+                            transition: .3s;
+                            border-bottom: 3px solid #FFFFFF;
+                            height: 60px;
+                        }
+                        a:hover{
+                            background: rgba(255,255,255,.2);
+                            height: 57px;
+                        }
+                    }
+            } 
+        }
+        .search{
+            position: absolute;
+            line-height: 60px;
+            right: 0;
+            top: 0;
+            .searchput{
+                display: inline-block;
+                a{
+                     padding: 0 6px;
+                     color: #0099CC;
+                    i{
+                      font-size: 20px;
+                    }
+                }
+            }
+        }
+        .search_form{
+            display: inline-block;
+            input{
+                width: 0;
+                line-height: 30px;
+                background: none;
+                border: 0;
+                border-bottom: 2px solid #FFFFFF;
+                outline: none;
+                font-size: 16px;
+                transition: .5s;
+                font-family:shanghei;
+            }
+            p{
+                display: none;
+            }
+        }        
+    }
+}
+
+// 手机下响应样式
+@media (max-width:768px){
+    .nav{
+        .navbar{
+            .title{
+                left: 0;
+                h1{
+                    font-size: 20px;
+                    i{
+                        font-size: 22px;
+                    }
+                }
+            }
+            .menue{
+              display: block;
+            }
+            .navlist{
+                width: 100%;
+                height: 0;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                overflow: hidden;
+                transition: .5s;
+                background: rgba(0,0,0,.2);
+                ul{
+                   clear: none;
+                   overflow: visible;
+                   width: 100%;
+                   li{
+                      width: 100%;
+                      padding: 0;
+                      float: none;
+                      a{
+                        font-size: 16px;
+                        border-bottom: 1px solid rgba(255,255,255,.2);
+                      }
+                    }
+                    li:last-of-type{
+                        a{
+                            border-bottom: 0;
+                        }
+                    }
+                }
+            }
+            .search{
+                .searchput{
+                    span{
+                        a{
+                          margin-right: 10px;
+                          display: inline-block;
+                        }
+                    }
+                }
+            }
+            .search_form{
+                opacity: 0;
+                position: fixed;
+                width: 0;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background: rgba(255,255,255,.95);
+                transition: opacity 1s;
+                form{
+                    position: absolute;
+                    width: 100%;
+                    top: 30%;
+                    text-align: center;
+                    .warp{
+                        padding: 0 15px;
+                        input{
+                            width: 100%;
+                            border-bottom: 2px solid rgba(255,102,102,.3);
+                        }
+                        p{
+                            display: inline-block ;
+                           line-height: 30px;
+                           text-align: left;
+                        }
+                    }
+                }
+            }  
+            .form_show{
+                width: 100%;
+                opacity: 1;
+            }
+            .form_hide{
+                opacity: 0;
+            }
+        }
+    }
+}

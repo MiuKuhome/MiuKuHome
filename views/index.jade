@@ -1,0 +1,37 @@
+extends header
+
+block content
+  div.header
+  div.nav
+    div.navbar
+      div.title
+        h1 
+           <i class="iconfont icon-longmao"></i>  MiuKuHome
+      div.navlist  
+        ul
+          li
+            a(href='#') 首页
+          li
+            a(href='#') 技术  
+          li
+            a(href='#') 图库
+          li
+            a(href='#') 作品      
+          li
+            a(href='#') Github
+          li
+            a(href='#') 关于  
+      div.menue
+        a(href='javascript:;',id="menu")
+          <i class="iconfont icon-icon"></i>        
+      div.search
+        div.searchput
+          a(href='javascript:;',id='search')
+            <i class="iconfont icon-sousuo"></i>
+        div.search_form
+          form(action="")
+            div.warp
+              input(type="text",placeholder="请输入搜索的标题")
+              p 你可以搜索文章标题的关键字或作品等标题来得到搜索结果             
+  include footer
+            

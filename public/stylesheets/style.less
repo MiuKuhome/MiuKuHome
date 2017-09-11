@@ -22,12 +22,12 @@ body{
     font-family:shanghei;
 }
 
-.header{
-    height: 350px;
-    background: url(http://ovufm1chl.bkt.clouddn.com/weibo-banner-02.jpg) no-repeat center;
-    background-size:cover;
-    position: relative;
-}
+// .header{
+//     height: 350px;
+//     background: url(http://ovufm1chl.bkt.clouddn.com/weibo-banner-02.jpg) no-repeat center;
+//     background-size:cover;
+//     position: relative;
+// }
 
 .nav{
     height: 60px;
@@ -37,18 +37,27 @@ body{
     left: 0;
     width: 100%;
     .navbar{
-        margin: 0 15px;
         position: relative;
+        max-width: 768px;
+        margin: 0 auto;
+        clear: both;
         .title{
             left: 0;
             top: 0;
             color: #FFFFFF;
             line-height: 60px;
-            position: absolute;
+            position: relative;
+            z-index: 9;
+            float: left;
             h1{
                 font-family: '-apple-system,BlinkMacSystemFont,"Lucida Grande","Helvetica Neue",Helvetica,Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Zen Hei","WenQuanYi Micro Hei","Noto Sans CJK SC","Source Han Sans CN",SimSun,sans-serif';
+                font-size: 26px;
+                a{
+                    color: #0099cc;
+                }
                 i{
-                    font-size: 40px;
+                    font-size: 30px;
+                    color: #0099cc;
                 }
             }
         }
@@ -56,7 +65,9 @@ body{
             position: relative;
             left: 0;
             top: 0;
-            text-align: center;
+            z-index: 9999999999;
+            float: left;
+            margin-left: 15px;
             ul{
                 display: inline-block;
                 clear: both;
@@ -87,7 +98,7 @@ body{
             line-height: 60px;
             display: none;
             a{  
-               margin-right: 50px;
+               margin-right: 60px;
                i{
                  font-size: 22px;
                  color: #FFFFFF;
@@ -140,12 +151,19 @@ body{
 
 .main{
     width: 768px;
-    margin: 35px auto;
+    margin: 100px auto;
     border-left: 1px solid rgba(139, 127, 127, .1);
     border-right: 1px solid rgba(139, 127, 127, .1);
     .warp{
         padding: 15px;
         .list{
+            margin-bottom: 60px;
+            .banner{
+                width: 100%;
+                img{
+                    width: 100%;
+                }
+            }
             h3.title{
                 font-weight: 400;
                 span{
@@ -158,6 +176,10 @@ body{
                 }
                 a{
                     color: #000000;
+                    transition: .2s;
+                }
+                a:hover{
+                    color: #99CC66;
                 }
             }
             .info{
@@ -170,6 +192,51 @@ body{
                     padding: 0 4px;
                 }
             }
+            .visit{
+                margin: 15px 0;
+                padding-left: 15px;
+                border-left: 4px solid #99CC66;
+                ul{
+                    clear: both;
+                    overflow: hidden;
+                    li{
+                        float: left;
+                        margin-right: 6px;
+                        a{
+                            display: block;
+                            img{
+                                display: block;
+                                width: 34px;
+                                height: 34px;
+                                border-radius: 2px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .list:last-of-type{
+            margin-bottom: 0;
+        }
+    }
+}
+
+.page{
+    width: 768px;
+    margin: 0 auto;
+    border-left: 1px solid rgba(139, 127, 127, .1);
+    border-right: 1px solid rgba(139, 127, 127, .1);
+    text-align: center;
+    margin-bottom: 30px;
+    ul{
+        display: inline-block;
+        clear: both;
+        overflow: hidden;
+        li{
+            float: left;
+            a{
+              color: #bbb;
+            }
         }
     }
 }
@@ -181,6 +248,7 @@ body{
     } 
     .nav{
         .navbar{
+            padding: 0 15px;
             .title{
                 left: 0;
                 h1{
@@ -198,10 +266,10 @@ body{
                 height: 0;
                 position: absolute;
                 top: 60px;
-                left: 0;
+                left: -15px;
                 overflow: hidden;
                 transition: .5s;
-                background: rgba(0,0,0,.2);
+                background: rgba(0,0,0,.6);
                 ul{
                    clear: none;
                    overflow: visible;
@@ -212,7 +280,7 @@ body{
                       float: none;
                       a{
                         font-size: 16px;
-                        border-bottom: 1px solid rgba(255,255,255,.2);
+                        border-bottom: 1px solid rgba(255,255,255,.6);
                       }
                     }
                     li:last-of-type{
@@ -222,13 +290,16 @@ body{
                     }
                 }
             }
+            .search{
+                right: 15px;
+            }
             .search_form{
                 position: fixed;
                 width: 100% !important;
                 height: 100%;
                 left: 0;
                 top: 0;
-                background: rgba(255,255,255,.94);
+                background: rgba(255,255,255,.97);
                 z-index: 9999;
                 display: none;
                 opacity: 0;
@@ -249,5 +320,8 @@ body{
                 opacity: 0;
             }
         }
+    }
+    .page{
+        width: 100%;
     }
 }

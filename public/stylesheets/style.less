@@ -52,18 +52,6 @@ body{
                 }
             }
         }
-        .menue{
-            text-align: right;
-            line-height: 60px;
-            display: none;
-            a{  
-               margin-right: 50px;
-               i{
-                 font-size: 22px;
-                 color: #FFFFFF;
-               }
-            }
-        }
         .navlist{
             position: relative;
             left: 0;
@@ -93,45 +81,104 @@ body{
                         }
                     }
             } 
+        }   
+        .menue{
+            text-align: right;
+            line-height: 60px;
+            display: none;
+            a{  
+               margin-right: 50px;
+               i{
+                 font-size: 22px;
+                 color: #FFFFFF;
+               }
+            }
         }
         .search{
             position: absolute;
-            line-height: 60px;
             right: 0;
             top: 0;
-            .searchput{
-                display: inline-block;
+            line-height: 60px;
+            clear: both;
+            overflow: hidden;
+            .link{
+                float: left;
+                margin-right: 10px;
                 a{
-                     padding: 0 6px;
-                     color: #0099CC;
+                    color: #0099cc;
                     i{
-                      font-size: 20px;
+                        font-size: 20px;
                     }
                 }
             }
-        }
-        .search_form{
-            display: inline-block;
-            input{
+            .search_form{
+                float: left;
                 width: 0;
-                line-height: 30px;
-                background: none;
-                border: 0;
-                border-bottom: 2px solid #FFFFFF;
-                outline: none;
-                font-size: 16px;
                 transition: .5s;
-                font-family:shanghei;
+                overflow: hidden;
+                form{
+                    input{
+                        width: 100%;
+                        outline: none;
+                        line-height: 30px;
+                        background: none;
+                        border: 0;
+                        border-bottom: 2px solid #76BAD1;
+                        font-size: 16px;
+                    }
+                    p{
+                        display: none;
+                    }
+                }
             }
-            p{
-                display: none;
+            .show_search{
+                width: 170px;
             }
-        }        
+        }  
+    }
+}
+
+.main{
+    width: 768px;
+    margin: 35px auto;
+    border-left: 1px solid rgba(139, 127, 127, .1);
+    border-right: 1px solid rgba(139, 127, 127, .1);
+    .warp{
+        padding: 15px;
+        .list{
+            h3.title{
+                font-weight: 400;
+                span{
+                    background: #99CC66;
+                    padding: 4px 8px;
+                    color: #FFFFFF;
+                    border-radius: 2px;
+                    line-height: 30px;
+                    margin-right: 15px;
+                }
+                a{
+                    color: #000000;
+                }
+            }
+            .info{
+                padding: 6px 0;
+                color: #bbb;
+                b{
+                    font-family: '-apple-system,BlinkMacSystemFont,"Lucida Grande","Helvetica Neue",Helvetica,Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Zen Hei","WenQuanYi Micro Hei","Noto Sans CJK SC","Source Han Sans CN",SimSun,sans-serif';                    
+                }
+                span{
+                    padding: 0 4px;
+                }
+            }
+        }
     }
 }
 
 // 手机下响应样式
 @media (max-width:768px){
+    .main{
+        width: 100%;
+    } 
     .nav{
         .navbar{
             .title{
@@ -175,49 +222,30 @@ body{
                     }
                 }
             }
-            .search{
-                .searchput{
-                    span{
-                        a{
-                          margin-right: 10px;
-                          display: inline-block;
-                        }
+            .search_form{
+                position: fixed;
+                width: 100% !important;
+                height: 100%;
+                left: 0;
+                top: 0;
+                background: rgba(255,255,255,.94);
+                z-index: 9999;
+                display: none;
+                opacity: 0;
+                form{
+                    padding: 50% 25px;
+                    p{
+                        display: block !important;
                     }
                 }
             }
-            .search_form{
-                opacity: 0;
-                position: fixed;
-                width: 0;
-                height: 100%;
-                top: 0;
-                left: 0;
-                background: rgba(255,255,255,.95);
-                transition: opacity 1s;
-                form{
-                    position: absolute;
-                    width: 100%;
-                    top: 30%;
-                    text-align: center;
-                    .warp{
-                        padding: 0 15px;
-                        input{
-                            width: 100%;
-                            border-bottom: 2px solid rgba(255,102,102,.3);
-                        }
-                        p{
-                            display: inline-block ;
-                           line-height: 30px;
-                           text-align: left;
-                        }
-                    }
-                }
-            }  
-            .form_show{
-                width: 100%;
+            .show_modal{
+                display: block;
+            }
+            .show_modal_opacity{
                 opacity: 1;
             }
-            .form_hide{
+            .hide_modal_opacity{
                 opacity: 0;
             }
         }

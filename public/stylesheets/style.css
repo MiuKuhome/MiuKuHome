@@ -1,1 +1,247 @@
-html,body,p,h1,h2,h3,h4,h5,h6,ul,ol,input{padding:0;margin:0}html{font-size:16px}@font-face{font-family:shanghei;src:url('../font/造字工房尚黑G0v1常规体.otf')}ul,ol{list-style:none}a{text-decoration:none}body{font-family:shanghei}.header{height:350px;background:url(http://ovufm1chl.bkt.clouddn.com/weibo-banner-02.jpg) no-repeat center;background-size:cover;position:relative}.nav{height:60px;background:rgba(129,199,132,0.9);position:fixed;top:0;left:0;width:100%}.nav .navbar{margin:0 15px;position:relative}.nav .navbar .title{left:0;top:0;color:#FFFFFF;line-height:60px;position:absolute}.nav .navbar .title h1{font-family:'-apple-system,BlinkMacSystemFont,"Lucida Grande","Helvetica Neue",Helvetica,Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Zen Hei","WenQuanYi Micro Hei","Noto Sans CJK SC","Source Han Sans CN",SimSun,sans-serif'}.nav .navbar .title h1 i{font-size:40px}.nav .navbar .menue{text-align:right;line-height:60px;display:none}.nav .navbar .menue a{margin-right:50px}.nav .navbar .menue a i{font-size:22px;color:#FFFFFF}.nav .navbar .navlist{position:relative;left:0;top:0;text-align:center}.nav .navbar .navlist ul{display:inline-block;clear:both;overflow:hidden;line-height:60px;margin:0 auto;font-size:20px;height:60px}.nav .navbar .navlist ul li{float:left}.nav .navbar .navlist ul li a{padding:0 16px;display:block;color:#FFFFFF;transition:.3s;border-bottom:3px solid #FFFFFF;height:60px}.nav .navbar .navlist ul li a:hover{background:rgba(255,255,255,0.2);height:57px}.nav .navbar .search{position:absolute;line-height:60px;right:0;top:0}.nav .navbar .search .searchput{display:inline-block}.nav .navbar .search .searchput a{padding:0 6px;color:#0099CC}.nav .navbar .search .searchput a i{font-size:20px}.nav .navbar .search_form{display:inline-block}.nav .navbar .search_form input{width:0;line-height:30px;background:none;border:0;border-bottom:2px solid #FFFFFF;outline:none;font-size:16px;transition:.5s;font-family:shanghei}.nav .navbar .search_form p{display:none}@media (max-width:768px){.nav .navbar .title{left:0}.nav .navbar .title h1{font-size:20px}.nav .navbar .title h1 i{font-size:22px}.nav .navbar .menue{display:block}.nav .navbar .navlist{width:100%;height:0;position:absolute;top:60px;left:0;overflow:hidden;transition:.5s;background:rgba(0,0,0,0.2)}.nav .navbar .navlist ul{clear:none;overflow:visible;width:100%}.nav .navbar .navlist ul li{width:100%;padding:0;float:none}.nav .navbar .navlist ul li a{font-size:16px;border-bottom:1px solid rgba(255,255,255,0.2)}.nav .navbar .navlist ul li:last-of-type a{border-bottom:0}.nav .navbar .search .searchput span a{margin-right:10px;display:inline-block}.nav .navbar .search_form{opacity:0;position:fixed;width:0;height:100%;top:0;left:0;background:rgba(255,255,255,0.95);transition:opacity 1s}.nav .navbar .search_form form{position:absolute;width:100%;top:30%;text-align:center}.nav .navbar .search_form form .warp{padding:0 15px}.nav .navbar .search_form form .warp input{width:100%;border-bottom:2px solid rgba(255,102,102,0.3)}.nav .navbar .search_form form .warp p{display:inline-block;line-height:30px;text-align:left}.nav .navbar .form_show{width:100%;opacity:1}.nav .navbar .form_hide{opacity:0}}
+html,
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+input {
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-size: 16px;
+}
+@font-face {
+  font-family: shanghei;
+  src: url('../font/造字工房尚黑G0v1常规体.otf');
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font-family: shanghei;
+}
+.header {
+  height: 350px;
+  background: url(http://ovufm1chl.bkt.clouddn.com/weibo-banner-02.jpg) no-repeat center;
+  background-size: cover;
+  position: relative;
+}
+.nav {
+  height: 60px;
+  background: rgba(129, 199, 132, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.nav .navbar {
+  margin: 0 15px;
+  position: relative;
+}
+.nav .navbar .title {
+  left: 0;
+  top: 0;
+  color: #FFFFFF;
+  line-height: 60px;
+  position: absolute;
+}
+.nav .navbar .title h1 {
+  font-family: '-apple-system,BlinkMacSystemFont,"Lucida Grande","Helvetica Neue",Helvetica,Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Zen Hei","WenQuanYi Micro Hei","Noto Sans CJK SC","Source Han Sans CN",SimSun,sans-serif';
+}
+.nav .navbar .title h1 i {
+  font-size: 40px;
+}
+.nav .navbar .navlist {
+  position: relative;
+  left: 0;
+  top: 0;
+  text-align: center;
+}
+.nav .navbar .navlist ul {
+  display: inline-block;
+  clear: both;
+  overflow: hidden;
+  line-height: 60px;
+  margin: 0 auto;
+  font-size: 20px;
+  height: 60px;
+}
+.nav .navbar .navlist ul li {
+  float: left;
+}
+.nav .navbar .navlist ul li a {
+  padding: 0 16px;
+  display: block;
+  color: #FFFFFF;
+  transition: .3s;
+  border-bottom: 3px solid #FFFFFF;
+  height: 60px;
+}
+.nav .navbar .navlist ul li a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  height: 57px;
+}
+.nav .navbar .menue {
+  text-align: right;
+  line-height: 60px;
+  display: none;
+}
+.nav .navbar .menue a {
+  margin-right: 50px;
+}
+.nav .navbar .menue a i {
+  font-size: 22px;
+  color: #FFFFFF;
+}
+.nav .navbar .search {
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: 60px;
+  clear: both;
+  overflow: hidden;
+}
+.nav .navbar .search .link {
+  float: left;
+  margin-right: 10px;
+}
+.nav .navbar .search .link a {
+  color: #0099cc;
+}
+.nav .navbar .search .link a i {
+  font-size: 20px;
+}
+.nav .navbar .search .search_form {
+  float: left;
+  width: 0;
+  transition: .5s;
+  overflow: hidden;
+}
+.nav .navbar .search .search_form form input {
+  width: 100%;
+  outline: none;
+  line-height: 30px;
+  background: none;
+  border: 0;
+  border-bottom: 2px solid #76BAD1;
+  font-size: 16px;
+}
+.nav .navbar .search .search_form form p {
+  display: none;
+}
+.nav .navbar .search .show_search {
+  width: 170px;
+}
+.main {
+  width: 768px;
+  margin: 35px auto;
+  border-left: 1px solid rgba(139, 127, 127, 0.1);
+  border-right: 1px solid rgba(139, 127, 127, 0.1);
+}
+.main .warp {
+  padding: 15px;
+}
+.main .warp .list h3.title {
+  font-weight: 400;
+}
+.main .warp .list h3.title span {
+  background: #99CC66;
+  padding: 4px 8px;
+  color: #FFFFFF;
+  border-radius: 2px;
+  line-height: 30px;
+  margin-right: 15px;
+}
+.main .warp .list h3.title a {
+  color: #000000;
+}
+.main .warp .list .info {
+  padding: 6px 0;
+  color: #bbb;
+}
+.main .warp .list .info b {
+  font-family: '-apple-system,BlinkMacSystemFont,"Lucida Grande","Helvetica Neue",Helvetica,Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Zen Hei","WenQuanYi Micro Hei","Noto Sans CJK SC","Source Han Sans CN",SimSun,sans-serif';
+}
+.main .warp .list .info span {
+  padding: 0 4px;
+}
+@media (max-width: 768px) {
+  .main {
+    width: 100%;
+  }
+  .nav .navbar .title {
+    left: 0;
+  }
+  .nav .navbar .title h1 {
+    font-size: 20px;
+  }
+  .nav .navbar .title h1 i {
+    font-size: 22px;
+  }
+  .nav .navbar .menue {
+    display: block;
+  }
+  .nav .navbar .navlist {
+    width: 100%;
+    height: 0;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    overflow: hidden;
+    transition: .5s;
+    background: rgba(0, 0, 0, 0.2);
+  }
+  .nav .navbar .navlist ul {
+    clear: none;
+    overflow: visible;
+    width: 100%;
+  }
+  .nav .navbar .navlist ul li {
+    width: 100%;
+    padding: 0;
+    float: none;
+  }
+  .nav .navbar .navlist ul li a {
+    font-size: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .nav .navbar .navlist ul li:last-of-type a {
+    border-bottom: 0;
+  }
+  .nav .navbar .search_form {
+    position: fixed;
+    width: 100% !important;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(255, 255, 255, 0.94);
+    z-index: 9999;
+    display: none;
+    opacity: 0;
+  }
+  .nav .navbar .search_form form {
+    padding: 50% 25px;
+  }
+  .nav .navbar .search_form form p {
+    display: block !important;
+  }
+  .nav .navbar .show_modal {
+    display: block;
+  }
+  .nav .navbar .show_modal_opacity {
+    opacity: 1;
+  }
+  .nav .navbar .hide_modal_opacity {
+    opacity: 0;
+  }
+}

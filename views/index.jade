@@ -23,15 +23,32 @@ block content
             a(href='#') 关于  
       div.menue
         a(href='javascript:;',id="menu")
-          <i class="iconfont icon-icon"></i>        
+          i(class="iconfont icon-icon")
       div.search
-        div.searchput
-          a(href='javascript:;',id='search')
-            <i class="iconfont icon-sousuo"></i>
+        div.link
+          a(href='javascript:;',id="search")
+            i(class="iconfont icon-sousuo")
         div.search_form
           form(action="")
-            div.warp
-              input(type="text",placeholder="请输入搜索的标题")
-              p 你可以搜索文章标题的关键字或作品等标题来得到搜索结果             
+            input(type="search", name="search",placeholder="请输入搜索内容")
+            p 请输入要搜索内容的标题或关键字
+  div.main
+    div.warp
+      div.list
+        div.banner
+          img(src="https://static.mf8.biz/wp-content/uploads/2017/06/enable-https-banner.jpg")
+        h3.title
+          span javascript
+          a(href="#") 关于javascript的面向对象部分 
+        div.info
+          b MiuKu 
+          span 发布于
+          time 2017年9月10日 
+          span
+            i(class="iconfont icon-liuyan1")
+            0       
+        div.abstract
+          p 我的的撒开了多久爱是快乐简单快乐撒娇的卡萨简单快乐撒娇的了撒娇的拉萨科技的快乐撒娇的快乐简单快乐撒娇
+                    
   include footer
             

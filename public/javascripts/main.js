@@ -2,44 +2,14 @@ window.onload = function() {
     // 全局变量
     var global = {};
     global.search = document.getElementById("search"); //选取元素
+    global.search_form = document.getElementsByClassName("search_form")[0];
+    global.put = global.search_form.lastChild.firstChild;
     global.search_off = true; //开启关闭搜索
-    global.put = document.getElementsByClassName("search_form")[0].firstChild.firstChild.firstChild; //搜索input元素
     global.menuDom = document.getElementById("menu"); //选取元素
     global.navlistDom = document.getElementsByClassName("navlist")[0]; //选取元素
     global.navli = global.navlistDom.lastChild.children; //选取li元素
     global.navLen = global.navli.length;
     global.nav_off = true;
-
-    // 搜索事件
-    if (window.innerWidth >= 768) {
-        global.search.onclick = function() {
-            if (global.search_off) {
-                global.put.style.width = "170px";
-                global.put.focus();
-            } else {
-                global.put.style.width = "0";
-            }
-            global.search_off = !global.search_off;
-        }
-        global.put.onblur = function() {
-            global.put.style.width = "0";
-            global.search_off = !global.search_off;
-        }
-
-    } else {
-        var formDom = document.getElementsByClassName("search_form")[0];
-        global.search.onclick = function() {
-            formDom.style.width = "100%";
-            formDom.style.opacity = 1;
-            global.put.focus();
-        }
-        global.put.onblur = function() {
-            formDom.style.opacity = 0;
-            setTimeout(function() {
-                formDom.style.width = 0;
-            }, 1000)
-        }
-    }
 
 
     // 菜单事件
@@ -58,6 +28,50 @@ window.onload = function() {
         global.nav_off = !global.nav_off;
     }
 
+
+    // 搜索事件
+    search();
+    window.onresize = function(){
+        global.put.blur();
+        search();
+    }
+
+    function search(){
+        if(window.innerWidth >= 768){
+            global.search.onclick = function(){
+                if(global.search_off){
+                    global.search_form.className = "search_form show_search";
+                    global.put.focus();
+                }else{
+                    global.search_form.className = "search_form"; 
+                }
+                console.log(global.search_off)
+                global.search_off = !global.search_off;
+            }
+        
+            global.put.onblur = function(){
+                global.search_form.className = "search_form";
+                global.search_off = !global.search_off;
+            }
+        }else{
+            global.search.onclick = function(){
+                global.search_form.className = "search_form show_modal";
+                setTimeout(function(){
+                    global.search_form.className = "search_form show_modal show_modal_opacity";
+                },0)
+                global.put.focus();
+            }
+            global.put.onblur = function(){
+                global.search_form.className = "search_form show_modal";
+                setTimeout(function(){
+                    global.search_form.className = "search_form show_modal hide_modal_opacity";
+                    setTimeout(function(){
+                        global.search_form.className = "search_form";
+                    },500)
+                },0)
+            }
+        }
+    }
 
 
 

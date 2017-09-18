@@ -1,0 +1,30 @@
+block navbar
+  div.nav
+    div.navbar
+      div.title
+        h1 
+          a(href="/")
+            <i class="iconfont icon-longmao"></i>  MiuKuHome
+      div.navlist  
+        ul
+         li
+            a(href='/') 首页
+          li
+            a(href='#') 技术 
+          li
+            a(href='#') 作品      
+          li
+            a(href='https://github.com/MiuKuhome',target="blank") Github
+          li
+            a(href='#') 关于  
+      div.menue
+        a(href='javascript:;',id="menu")
+          i(class="iconfont icon-icon")
+      div.search
+        div.link
+          a(href='javascript:;',id="search")
+            i(class="iconfont icon-sousuo")
+        div.search_form
+          form(action="")
+            input(type="search", name="search",placeholder="请输入搜索内容")
+            p 请输入要搜索内容的标题或关键字

@@ -33,6 +33,7 @@ body{
     height: 60px;
     background: rgba(129,199,132,.9);
     position: fixed;
+    z-index: 999999;
     top: 0;
     left: 0;
     width: 100%;
@@ -154,7 +155,7 @@ body{
     margin: 100px auto;
     border-left: 1px solid rgba(139, 127, 127, .1);
     border-right: 1px solid rgba(139, 127, 127, .1);
-    .warp{
+    .container{
         padding: 15px;
         .list{
             margin-bottom: 60px;
@@ -166,9 +167,10 @@ body{
             }
             h3.title{
                 font-weight: 400;
+                padding: 15px 0;
                 span{
                     background: #99CC66;
-                    padding: 4px 8px;
+                    padding: 4px 8px 6px;
                     color: #FFFFFF;
                     border-radius: 2px;
                     line-height: 30px;
@@ -218,12 +220,201 @@ body{
         .list:last-of-type{
             margin-bottom: 0;
         }
+        div.title{
+            text-align: center;
+            h2{
+                font-weight: 300;
+                // background: rgba(153, 204, 102, 0.8);
+                line-height: 50px;
+                color: #40BCE6;
+                font-size: 24px;    
+            }
+        }
+        .info{
+            padding: 6px 0;
+            color: #bbb;
+            text-align: center;
+            b{
+                font-family: '-apple-system,BlinkMacSystemFont,"Lucida Grande","Helvetica Neue",Helvetica,Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Zen Hei","WenQuanYi Micro Hei","Noto Sans CJK SC","Source Han Sans CN",SimSun,sans-serif';                    
+            }
+            span{
+                padding: 0 4px;
+            }
+            a{
+                background: rgba(153, 204, 102, 0.9);
+                padding: 2px 8px 4px;
+                color: #FFFFFF;
+                border-radius: 2px;
+                margin-right: 15px;
+                font-size: 18px;
+            }
+        }
+        .content{
+            padding: 15px;
+            font-size: 18px;
+            color: rgb(69, 75, 104);
+        }
+        .author_say{
+            margin: 15px;
+            padding: 15px;
+            background: #F5F4F4;
+            img{
+                width: 50px;
+                height: 50px;
+                border-radius: 50px;
+                vertical-align: middle;
+            }
+            span{
+                padding-left: 1em;
+            }
+        }
+        .comment{
+            padding: 15px;
+            h3{
+                margin: 15px 0;
+                border-left: 3px solid #99CC66;
+                text-indent: 8px;
+            }
+            .submit{
+                margin: 35px 0;
+                .textarea{
+                    padding: 15px;
+                    border: 1px solid rgba(244, 246, 247, 0.93);
+                    position: relative;
+                    padding-bottom: 50px;
+                    textarea{
+                        width: 100%;
+                        height: 100%;
+                        outline: none;
+                        resize: none;
+                        border: 0;
+                        font-size: 16PX;
+                    }
+                    .login{
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        width: 100%;
+                        height: 50px;
+                        background: rgba(244, 246, 247, 0.43);
+                        ul{
+                            clear: both;
+                            overflow: hidden;
+                            li{
+                                float: left;
+                                width: 25%;
+                                height: 50px;
+                                text-align: center;
+                                line-height: 50px;
+                                a{
+                                    color: #FFFFFF;
+                                    display: block;
+                                    width: 100%;
+                                    height: 100%;
+                                    transition: .3s;
+                                    i{
+                                        font-size: 30px;
+                                    }
+                                }
+                                a:hover{
+                                    background: rgba(69, 75, 104, 0.5)
+                                }
+                            }
+                            li:nth-of-type(1){
+                                a{
+                                    color: #0099cc;
+                                    background: rgba(153, 204, 102, .1);                                   
+                                }
+                                a:hover{
+                                    background: rgba(153, 204, 102, .2);
+                                }
+                            }
+                            li:nth-of-type(2){
+                                a{
+                                    color: #99CC66;   
+                                    background: rgba(0, 153, 204, .1);                             
+                                }
+                                a:hover{
+                                    background: rgba(0, 153, 204, .2);
+                                }
+                            }
+                            li:nth-of-type(3){
+                                a{
+                                    color: #D1D116;                                     
+                                    background: rgba(209, 209, 22, .1);                                  
+                                }
+                                a:hover{
+                                    background: rgba(209, 209, 22, .2);  
+                                }
+                            }
+                            li:nth-of-type(4){
+                                float: right;
+                                a{
+                                    color: #99CC66;
+                                    background: rgba(69, 75, 104, 0.9);                               
+                                }
+                                a:hover{
+                                    background: rgba(69, 75, 104, 1); 
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .comment_list{
+                border-bottom: 1px solid rgba(139, 127, 127, .05);
+                padding: 4px 0;
+                margin-top: 15px;
+                clear: both;
+                overflow: hidden;
+                .photo{
+                    float: left;
+                    img{
+                        width: 60px;
+                        height: 60px;
+                    }
+                }
+                .contain{
+                    padding-left: 50px;
+                    .infomation{
+                        padding-left: 15px;
+                        font-size: 14px;
+                        a{
+                            color: #99CC66;
+                        }
+                        time{
+                            padding: 0 8px;
+                        }
+                    }
+                    .contents{
+                        padding-left: 15px;
+                        padding-top: 4px;
+                        color: #7D7F81;
+                    }
+                }
+            }
+            .reply{
+                padding: 30px 20px;
+                .comment_list{
+                    border-bottom: 0;
+                    .photo{
+                        img{
+                            width: 45px;
+                            height: 45px;
+                        }
+                    }
+                    .contain{
+                        padding-left: 40px;
+                    }
+                }
+            }
+        }
     }
 }
 
-.page{
+.page,.comment_page{
     width: 768px;
-    margin: 0 auto;
+    margin: 15px auto;
     border-left: 1px solid rgba(139, 127, 127, .1);
     border-right: 1px solid rgba(139, 127, 127, .1);
     text-align: center;
@@ -237,7 +428,66 @@ body{
             a{
               color: #bbb;
             }
+            a:hover{
+                color: #99CC66;
+            }
+            span{
+                color: #0099cc;
+            }
         }
+        li.count{
+            padding: 0 15px;
+        }
+    }
+}
+
+.comment_page{
+    width: 100%;
+    border: 0;
+}
+
+.footer{
+    background: #222;
+    .container{
+       max-width: 992px;
+       margin: 0 auto;
+       padding: 25px 0;
+       color: #ccc;
+       clear: both;
+       overflow: hidden;
+       h3{
+           font-family: '-apple-system,BlinkMacSystemFont,"Lucida Grande","Helvetica Neue",Helvetica,Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Zen Hei","WenQuanYi Micro Hei","Noto Sans CJK SC","Source Han Sans CN",SimSun,sans-serif';
+           font-size: 14px;      
+       }
+       .left{
+           width: 33.333333%;
+           float: left;
+       }
+       .center{
+           width: 33.333333%;
+           float: left;
+           p{   
+               padding: 4px 0;
+               span{
+                   display: inline-block;
+                   width: 50px;
+               }
+               a{
+                   color: #ccc;
+               }
+               a:hover{
+                   color: #76BAD1;
+               }
+           }
+       }
+       .right{
+           width: 33.333333%;
+           float: left;
+       }
+       .left,.center,.right{
+           padding: 6px 0;
+           font-size: 14px;
+       }
     }
 }
 
@@ -245,6 +495,13 @@ body{
 @media (max-width:768px){
     .main{
         width: 100%;
+        .container{
+            .title{
+                h2{
+                    font-size: 20px !important;
+                }
+            }
+        }
     } 
     .nav{
         .navbar{
@@ -300,9 +557,9 @@ body{
                 left: 0;
                 top: 0;
                 background: rgba(255,255,255,.97);
-                z-index: 9999;
                 display: none;
                 opacity: 0;
+                z-index: 9999999;
                 form{
                     padding: 50% 25px;
                     p{
@@ -323,5 +580,21 @@ body{
     }
     .page{
         width: 100%;
+    }
+    .comment{
+        .submit{
+            .textarea{
+                .login{
+                    ul{
+                        li{
+                            width: 25% !important;
+                        }
+                        li:nth-of-type(4){
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

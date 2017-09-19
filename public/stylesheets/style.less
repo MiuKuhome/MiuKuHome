@@ -409,6 +409,53 @@ body{
                 }
             }
         }
+        .about{
+            font-family: '-apple-system,BlinkMacSystemFont,"Lucida Grande","Helvetica Neue",Helvetica,Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Zen Hei","WenQuanYi Micro Hei","Noto Sans CJK SC","Source Han Sans CN",SimSun,sans-serif';
+            h2{
+                padding-bottom: 15px;
+            }            
+            .card{
+                padding: 15px;
+                margin-bottom: 15px;
+                background: #F5F4F4;
+                clear: both;
+                overflow: hidden;
+                div.photo{
+                    float: left;
+                    img{
+                        width: 70px;
+                        height: 70px;
+                        border-radius: 50px;
+                        vertical-align: middle;
+                    }
+                }
+                div.introduce{
+                    float: left;
+                    padding-left: 30px;
+                    p{
+                        line-height: 30px;
+                        span{
+                            color: #3B2C2C
+                        }
+                    }
+                    hr{
+                        height: 1px;
+                        border: 0;
+                        background: rgba(153, 204, 102, 0.25);
+                    }
+                }
+                .hr{
+                    height: 1px;
+                    border: 0;
+                    background: rgba(153, 204, 102, 0.25);
+                }
+            }
+            .project{
+                p{
+                    line-height: 30px;
+                }
+            }
+        }
     }
 }
 
@@ -499,6 +546,19 @@ body{
             .title{
                 h2{
                     font-size: 20px !important;
+                }
+            }
+            .about{
+                .card{
+                    .photo{
+                        float: none !important;
+                        text-align: center;
+                    }
+                    .introduce{
+                        float: none !important;
+                        padding-left: 0 !important;
+                        padding-top: 20px;
+                    }
                 }
             }
         }

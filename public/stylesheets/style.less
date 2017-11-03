@@ -179,6 +179,7 @@ body{
                 a{
                     color: #000000;
                     transition: .2s;
+                    line-height: 30px;
                 }
                 a:hover{
                     color: #99CC66;
@@ -348,10 +349,39 @@ body{
                                 }
                             }
                             li:nth-of-type(4){
-                                float: right;
                                 a{
                                     color: #99CC66;
                                     background: rgba(69, 75, 104, 0.9);                               
+                                }
+                                a:hover{
+                                    background: rgba(69, 75, 104, 1); 
+                                }
+                            }
+                            li.login_success{
+                                width: 75%;
+                                overflow: hidden;
+                                clear: both;
+                                .login_photo{
+                                    text-align: left;
+                                    img{
+                                        width: 50px;
+                                        height: 50px;
+                                        float: left;
+                                        padding-right: 10px;
+                                    }
+                                    span{
+                                        display: inline-block;
+                                        height: 50px;
+                                        line-height: 50px;
+                                        font-size: 16px;
+                                        font-family: '-apple-system,BlinkMacSystemFont,"Lucida Grande","Helvetica Neue",Helvetica,Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Zen Hei","WenQuanYi Micro Hei","Noto Sans CJK SC","Source Han Sans CN",SimSun,sans-serif';                                                            
+                                    }
+                                }
+                            }
+                            li.submit_success{
+                                a{
+                                    color: #99CC66;
+                                    background: rgba(69, 75, 104, 0.9); 
                                 }
                                 a:hover{
                                     background: rgba(69, 75, 104, 1); 
@@ -405,6 +435,37 @@ body{
                     }
                     .contain{
                         padding-left: 40px;
+                    }
+                }
+                .reply_input{
+                    border-top: 1px solid rgba(139, 127, 127, .05);
+                    padding-top: 15px;
+                    position: relative;
+                    input{
+                        width: 100%;
+                        border: 1px solid #C8C9CC;
+                        border-radius: 2px; 
+                        line-height: 35px;
+                        outline: none;
+                        text-indent: 1em;
+                        font-size: 14px;
+                    }
+                    .reply_submit{
+                        button{
+                            position: absolute;
+                            right: -2px;
+                            top: 15px;
+                            width: 80px;
+                            height: 37px;
+                            background: rgba(69, 75, 104, 0.9); ;
+                            color: #99CC66;
+                            border: 0;
+                            border-top-right-radius: 2px;
+                            border-bottom-right-radius: 2px;
+                            outline: none;
+                            font-size: 14px;
+                            cursor: pointer;
+                        }
                     }
                 }
             }

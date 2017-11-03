@@ -22,25 +22,31 @@ block content
                 span 世无难事，存乎一心
 
             div.comment
-                h3 评论者
+                h3 评论圈
                 div.submit
                   form(action="")
                     div.textarea
-                        textarea(name="", cols="30", rows="10")
+                        textarea(name="", cols="30", rows="6")
                         div.login
                             ul
-                              li
-                                a(href="#")
-                                 i(class="iconfont icon-QQ")
-                              li
-                                a(href="#")
-                                 i(class="iconfont icon-weixin")  
-                              li
-                                a(href="#")
-                                 i(class="iconfont icon-weibo-copy") 
+                            //-   li
+                            //-     a(href="#")
+                            //-      i(class="iconfont icon-QQ")
+                            //-   li
+                            //-     a(href="#")
+                            //-      i(class="iconfont icon-weixin")  
+                            //-   li
+                            //-     a(href="#")
+                            //-      i(class="iconfont icon-weibo-copy") 
                               li.form_submit
-                                a.btn(href="#")
-                                    发表评论     
+                                a.btn(href="javascript:;") 发表评论
+                            ul
+                                li.login_success
+                                    div.login_photo
+                                        img(src="http://img.25pp.com/uploadfile/soft/images/2014/0927/20140927123300330.jpg", alt="miuku",title="miuku")
+                                        span Miuku
+                                li.form_submit.submit_success
+                                    a.btn(href="javascript:;") 发表评论
                                        
                 div.comment_list
                     div.photo
@@ -61,7 +67,7 @@ block content
                                     a(href="#")< master >
                                     time 2017年9月18日
                                 div.contents
-                                    p 赞同十分赞同，非常赞同，不得不赞同!!!!   
+                                    p 赞同十分赞同，非常赞同，不得不赞同!!!!     
 
                         div.comment_list
                             div.photo
@@ -72,6 +78,10 @@ block content
                                     time 2017年9月18日
                                 div.contents
                                     p 这篇文章非常不错，值得肯定!!!!  
+                        div.reply_input
+                            input(type="text",placeholder="回复请使用@")
+                            div.reply_submit
+                                button(type="submit") 发表            
                 div.comment_list
                     div.photo
                         img(src="http://img.25pp.com/uploadfile/soft/images/2014/0927/20140927123300330.jpg", alt="")    

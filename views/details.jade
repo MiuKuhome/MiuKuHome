@@ -5,18 +5,18 @@ block content
     div.main
         div.container
             div.title
-                h2 < 关于javascript的面向对象部分 >
+                h2 < #{detailDate.title} >
             div.info
-                a(href="#") css
+                a(href="#") #{detailDate.type.name}
                 b MiuKu 
                 span 发布于
-                time 2017年9月10日 
+                time #{moment(detailDate.createdAt).format('YYYY-MM-DD HH:mm:ss')}  
                 span
                     i(class="iconfont icon-liuyan1")
                     0           
 
             div.content
-                p 电视剧啊看来京东上卡了简单快乐撒娇的快乐撒娇点开链接撒开了大家撒开了大家撒开了较大时刻建档立卡数据的来看撒娇的快乐撒娇的考拉是简单快乐撒即可来点开链接撒开了简单快乐撒娇的快乐撒娇的考拉是简单快乐撒娇的考拉是简单快乐撒娇的考拉手机打开啦
+                div!=detailDate.content
             div.author_say
                 img(src="http://img.25pp.com/uploadfile/soft/images/2014/0927/20140927123300330.jpg", alt="author")
                 span 世无难事，存乎一心
